@@ -85,8 +85,10 @@ namespace Lab_4_S_A
         {
            if (Check_1.Visible == true && Check_2.Visible == true)
             {
+                IJSON_class Iobj;
                 JSON_class j = new JSON_class(team1, team2, Date_of_match);
-                j.writeJSON();
+                Iobj = j;
+                Iobj.writeJSON();
                 this.Close();              
             }
         }

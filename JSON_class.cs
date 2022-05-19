@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace Lab_4_S_A
 {
-    public class Team_match
+    public class Team_match 
     {
         public Team team1;
         public Team team2;
     }
-    public class JSON_class : Team
+    public class JSON_class : IJSON_class
     {       
         public string Match_name;
         public string Date_of_match;
@@ -27,7 +27,6 @@ namespace Lab_4_S_A
             mymatch = new Team_match();
             this.team1 = mymatch.team1 = team1;
             this.team2 = mymatch.team2 = team2;
-            //mymatch.Match_name = $"{team1.TName} vs {team2.TName}";
             filepath = $"Matches\\{team1.TName} vs {team2.TName} {Date_of_match}.json";
         }
         public JSON_class(Team_match team_match, string filepath)
